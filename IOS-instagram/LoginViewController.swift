@@ -6,9 +6,27 @@
 //
 
 import UIKit
+//import parse
 
 class LoginViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var username: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBAction func onSignIn(_ sender: Any) {
+        
+//        var user = PFUser()
+//        user.username = username.text
+//        user.password = password.text
+    }
+    
+    
+    @IBAction func onSignUp(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

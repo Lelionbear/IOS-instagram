@@ -60,6 +60,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DOF-pq-BDq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-Jn-7ZY" userLabel="Sign Up Button">
                                 <rect key="frame" x="265" y="622" width="90" height="45"/>
@@ -71,6 +74,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrr-cb-3z8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,17 +101,22 @@
                             <constraint firstItem="U2V-ac-NJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ylC-Xj-4Tm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="U2V-ac-NJm" id="dGg-G0-qRj"/>
+                        <outlet property="username" destination="Uzw-Gu-Oru" id="3d9-tu-VFV"/>
+                        <segue destination="bPM-xS-2gR" kind="presentation" identifier="loginSegue" id="oHW-Il-VTM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="98.4375"/>
+            <point key="canvasLocation" x="139" y="86"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="k5e-1a-8A8">
             <objects>
                 <viewController id="11u-ib-Zsa" customClass="FeedViewController" customModule="IOS_instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SND-Tx-dJH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="t2G-fm-OpU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,7 +133,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bPM-xS-2gR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iWt-Co-iPV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
