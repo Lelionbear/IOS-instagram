@@ -6,11 +6,9 @@
 //
 
 import UIKit
-//import parse
+import Parse
 
 class LoginViewController: UIViewController {
-
-    
     
     @IBOutlet weak var username: UITextField!
     
@@ -18,20 +16,44 @@ class LoginViewController: UIViewController {
     
     @IBAction func onSignIn(_ sender: Any) {
         
-//        var user = PFUser()
-//        user.username = username.text
-//        user.password = password.text
     }
     
     
     @IBAction func onSignUp(_ sender: Any) {
+        
+        let user = PFUser()
+        user.username = username.text
+        user.password = password.text
+
+        user.signUpInBackground {(success, error) in
+            if success {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        
+        view.addGestureRecognizer(tap)
     }
+    
+//    @objc func dismissKeyboard()
+//    {
+//        view.endEditing(true)
+//    }
+    
+//    func dismissKey() {
+//        let tap = UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(UIViewController.dismissKeyboard))
+//
+//        tap.cancelsTouchesInView = false view.addGestureRecognizer(tap)
+//    }
     
 
     /*
