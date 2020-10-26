@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,7 +136,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hsG-IF-MQg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="500" id="I84-2S-JG3" customClass="PostCell" customModule="IOS_instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="500"/>
@@ -151,16 +153,18 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ht-mj-tG8">
-                                                    <rect key="frame" x="8" y="471" width="52" height="20.5"/>
+                                                    <rect key="frame" x="8" y="471" width="52" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment about this post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwt-u5-jI5">
-                                                    <rect key="frame" x="68" y="471" width="338" height="20.5"/>
+                                                    <rect key="frame" x="68" y="471" width="338" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -175,6 +179,7 @@
                                                 <constraint firstItem="9ht-mj-tG8" firstAttribute="leading" secondItem="E5R-Fu-5A7" secondAttribute="leading" constant="8" id="znC-j9-wSW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="captionLabel" destination="Iwt-u5-jI5" id="HNy-a3-t6X"/>
                                             <outlet property="photoView" destination="CuG-7v-cIG" id="AaO-hD-tma"/>
@@ -185,7 +190,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t2G-fm-OpU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="t2G-fm-OpU" firstAttribute="trailing" secondItem="hsG-IF-MQg" secondAttribute="trailing" id="DAh-a9-v1j"/>
                             <constraint firstItem="hsG-IF-MQg" firstAttribute="centerY" secondItem="SND-Tx-dJH" secondAttribute="centerY" id="E5j-9l-TNZ"/>
@@ -195,6 +200,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BhI-E5-xhK">
                         <barButtonItem key="rightBarButtonItem" title="Camera Button" image="insta_camera_btn" id="DMs-dq-fF0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="pMh-Zb-di3" kind="presentation" id="ZRx-4W-Vd6"/>
                             </connections>
@@ -216,31 +222,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xc5-qq-ZPp">
-                                <rect key="frame" x="20" y="39" width="375" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xc5-qq-ZPp">
+                                <rect key="frame" x="8" y="8" width="398" height="318.5"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xc5-qq-ZPp" secondAttribute="height" multiplier="5:4" id="rXD-gk-ecb"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="SsR-Ux-4Bb" appends="YES" id="yca-Qp-o76"/>
                                 </connections>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pfr-ZH-L5m">
-                                <rect key="frame" x="20" y="360" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pfr-ZH-L5m">
+                                <rect key="frame" x="8" y="334.5" width="398" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agM-u3-Whf">
-                                <rect key="frame" x="20" y="426" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agM-u3-Whf">
+                                <rect key="frame" x="8" y="376.5" width="398" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onSubmitButton:" destination="pMh-Zb-di3" eventType="touchUpInside" id="RmA-nm-zVi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VIA-fz-ejQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pfr-ZH-L5m" firstAttribute="leading" secondItem="VIA-fz-ejQ" secondAttribute="leading" constant="8" id="5u0-xY-JcB"/>
+                            <constraint firstItem="xc5-qq-ZPp" firstAttribute="leading" secondItem="VIA-fz-ejQ" secondAttribute="leading" constant="8" id="JDN-mm-Zvn"/>
+                            <constraint firstItem="VIA-fz-ejQ" firstAttribute="trailing" secondItem="Pfr-ZH-L5m" secondAttribute="trailing" constant="8" id="P50-Ic-ghG"/>
+                            <constraint firstItem="agM-u3-Whf" firstAttribute="leading" secondItem="VIA-fz-ejQ" secondAttribute="leading" constant="8" id="PiR-oc-smf"/>
+                            <constraint firstItem="VIA-fz-ejQ" firstAttribute="trailing" secondItem="agM-u3-Whf" secondAttribute="trailing" constant="8" id="p7u-Py-eaN"/>
+                            <constraint firstItem="VIA-fz-ejQ" firstAttribute="trailing" secondItem="xc5-qq-ZPp" secondAttribute="trailing" constant="8" id="rHg-rw-gOh"/>
+                            <constraint firstItem="xc5-qq-ZPp" firstAttribute="top" secondItem="VIA-fz-ejQ" secondAttribute="top" constant="8" id="s57-Gs-pes"/>
+                            <constraint firstItem="Pfr-ZH-L5m" firstAttribute="top" secondItem="xc5-qq-ZPp" secondAttribute="bottom" constant="8" id="t75-VE-9Mg"/>
+                            <constraint firstItem="agM-u3-Whf" firstAttribute="top" secondItem="Pfr-ZH-L5m" secondAttribute="bottom" constant="8" id="vF8-Um-59f"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="commentField" destination="Pfr-ZH-L5m" id="dlg-7B-77v"/>
@@ -264,6 +286,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iWt-Co-iPV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -280,11 +304,11 @@
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
